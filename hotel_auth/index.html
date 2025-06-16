@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hotel Signup</title>
+  <link rel="stylesheet" href="style.css"/>
+
+</head>
+
+<body>
+
+  <div class="auth-container">
+    <div class="left-panel">
+      <img src="hotel.jpg" alt="Hotel Room">
+      <div class="overlay">
+      </div>
+    </div>
+
+    <div class="right-panel">
+      <div class="form-header">
+        <h2>SignUp</h2>
+        <div class="tab-toggle">
+          <button class="tab active" onclick="setTab('user')">User</button>
+          <button class="tab" onclick="setTab('business')">Business</button>
+        </div>
+      </div>
+
+      <form id="signup-form">
+        
+        <input type="text" placeholder="Full Name" required />
+        <input type="email" placeholder="Email Address" required />
+        <input type="password" placeholder="Password" required />
+        <input type="password" placeholder="Confirm Password" required />
+
+        <div class="terms">
+          <input type="checkbox" id="terms" required />
+          <label for="terms">I agree to the Terms & Conditions</label>
+        </div>
+
+        <button type="submit" class="submit-btn">SIGN UP</button>
+
+        <p class="login-link">Already have an account? <a href="#">Login</a></p>
+
+        <div style="display: flex; justify-content: center; gap: 15px; margin-top: 20px;">
+            <a href="#" title="Sign up with Facebook">
+              <img src="facebook-icon.png" alt="Facebook" style="width: 40px; height: 40px;">
+            </a>
+            <a href="#" title="Sign up with Instagram">
+              <img src="instagram-icon.png" alt="Instagram" style="width: 40px; height: 40px;">
+            </a>
+            <a href="#" title="Sign up with Google">
+              <img src="google-icon.png" alt="Google" style="width: 40px; height: 40px;">
+            </a>
+            <a href="#" title="Sign up with Apple">
+              <img src="apple-icon.png" alt="Apple" style="width: 40px; height: 40px;">
+            </a>
+        </div>
+
+
+          </form>
+        <div class="dark-mode-toggle">
+          <button id="toggle-dark-mode">🌙</button>
+        </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

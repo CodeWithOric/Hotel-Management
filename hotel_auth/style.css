@@ -1,0 +1,269 @@
+      {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', sans-serif;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .auth-container {
+        display: flex;
+        max-width: 1000px;
+        background: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+        width: 100%;
+      }
+
+      .left-panel {
+        width: 45%;
+        position: relative;
+      }
+
+      .left-panel img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .left-panel .overlay {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        color: white;
+        text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+      }
+
+      .left-panel .overlay h1 {
+        font-size: 28px;
+        margin-bottom: 10px;
+      }
+
+      .right-panel {
+        width: 55%;
+        padding: 40px 30px;
+      }
+
+      .form-header {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .tab-toggle {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+      }
+
+      .tab {
+        flex: 1;
+        padding: 10px 0;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+        background: transparent;
+        border-bottom: 3px solid transparent;
+        transition: 0.3s;
+      }
+
+      .tab.active {
+        border-color: #00bcd4;
+        color: #00bcd4;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="password"] {
+        padding: 12px;
+        margin: 8px 0;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        outline: none;
+      }
+
+      .terms {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        margin: 12px 0;
+      }
+
+      .submit-btn {
+        background: #00bcd4;
+        color: white;
+        padding: 12px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: bold;
+        margin-top: 10px;
+      }
+
+      .login-link {
+        margin-top: 10px;
+        text-align: center;
+        font-size: 14px;
+      }
+
+      .login-link a {
+        color: #00bcd4;
+        text-decoration: none;
+      }
+
+      .social-login {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        margin-top: 20px;
+      }
+
+      .google-btn,
+      .apple-btn {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        background: white;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      
+      @media (max-width: 992px) {
+        .auth-container {
+          flex-direction: column;
+          height: auto;
+          width: 90%;
+          margin: 20px auto;
+        }
+
+        .left-panel, .right-panel {
+          width: 100%;
+          height: auto;
+        }
+
+        .left-panel {
+          order: 1;
+        }
+
+        .right-panel {
+          order: 2;
+          padding: 20px;
+        }
+
+        .tab-toggle {
+          flex-direction: column;
+        }
+
+        .tab {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+
+        .social-login {
+          flex-direction: column;
+        }
+
+        .google-btn,
+        .apple-btn {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .left-panel .overlay h1 {
+          font-size: 22px;
+        }
+
+        .left-panel .overlay p {
+          font-size: 14px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+          font-size: 14px;
+        }
+
+        .submit-btn {
+          font-size: 16px;
+          padding: 10px;
+        }
+
+        .form-header h2 {
+          font-size: 22px;
+        }
+      }
+
+  
+      .dark-mode-toggle {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+      }
+
+      #toggle-dark-mode {
+        background: #eee;
+        border: none;
+        border-radius: 20px;
+        padding: 8px 12px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: 0.3s ease;
+      }
+
+      #toggle-dark-mode:hover {
+        background: #ddd;
+      }
+
+      body.dark-mode {
+        background-color: #121212;
+        color: #eee;
+      }
+
+      body.dark-mode .auth-container {
+        background: #1e1e1e;
+      }
+
+      body.dark-mode .left-panel .overlay {
+        color: #fff;
+      }
+
+      body.dark-mode input,
+      body.dark-mode .submit-btn,
+      body.dark-mode .google-btn,
+      body.dark-mode .apple-btn {
+        background: #2a2a2a;
+        color: #fff;
+        border: 1px solid #444;
+      }
+
+      body.dark-mode .tab.active {
+        color: #4dd0e1;
+        border-color: #4dd0e1;
+      }
+
+      body.dark-mode .login-link a {
+        color: #4dd0e1;
+      }
+      a img {
+        transition: transform 0.2s ease;
+      }
+      a:hover img {
+        transform: scale(1.1);
+      }
+
+
